@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wetter Widget | Danis Hasanbegovic</title>
+    <link rel="stylesheet" href="src/styles/_weather-widget.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="src/js/wetter-widget.js"></script>
+  </head>
+  <body class="weather-page">
+    <main class="main-content">
+      <section id="weather-section" class="section">
+        <div class="container">
+          <h2 class="section-title">Wetter Widget</h2>
+          <div id="weather-widget" class="weather-widget">
+            <div class="weather-search">
+              <div class="search-container">
+                <input
+                  type="text"
+                  id="city-input"
+                  placeholder="Stadt eingeben"
+                />
+                <div
+                  id="suggestions-container"
+                  class="suggestions-container"
+                ></div>
+              </div>
+              <button id="search-btn">Suchen</button>
+            </div>
+            <div class="weather-info">
+              <h3 id="city-name"></h3>
+              <div class="weather-details">
+                <img id="weather-icon" src="" alt="Wetter Icon" />
+                <p id="temperature"></p>
+                <p id="description"></p>
+              </div>
+              <div class="additional-info">
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

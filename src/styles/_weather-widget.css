@@ -1,0 +1,194 @@
+/* Main Container */
+.weather-widget {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 30px;
+  max-width: 400px;
+  margin: 40px auto;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.weather-widget:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Container */
+.weather-search {
+  display: flex;
+  gap: 10px; /* Adds space between input and button */
+  justify-content: space-between; /* Changed to space-between */
+  margin-bottom: 25px;
+  align-items: center; /* Aligns items vertically */
+}
+
+.search-container {
+  flex: 1;
+  position: relative;
+  min-width: 0; /* Prevents input from growing too large */
+  margin-right: 10px; /* Adds space between input and button */
+}
+
+#city-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+#city-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#city-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+#search-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevents button text from wrapping */
+  flex-shrink: 0; /* Prevents button from shrinking */
+  transition: all 0.3s ease;
+}
+
+#search-btn:hover {
+  background-color: #ff8787;
+  transform: scale(1.05);
+}
+
+/* Weather Information */
+.weather-info {
+  text-align: center;
+}
+
+#city-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#weather-icon {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+#temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#description {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+/* Additional Info */
+.additional-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.additional-info p {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Suggestions Container */
+.suggestions-container {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  z-index: 10;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Suggestion Item */
+.suggestion-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: rgba(174, 198, 255, 0.3);
+}
+
+/* Scrollbar Styles */
+.suggestions-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.suggestions-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.suggestions-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.suggestions-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .weather-search {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-container {
+    margin-right: 0;
+  }
+
+  #search-btn {
+    width: 100%;
+  }
+}
